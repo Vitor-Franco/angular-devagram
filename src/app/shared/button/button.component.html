@@ -1,0 +1,14 @@
+<!--
+  1. ngClass, classes a serem adicionadas no botão,
+  isto é, pode ser uma lista [class1, class2, class3],
+  ou um objeto {class1: true, class2: false, class3: true}
+  ou uma string 'class1 class2 class3'
+-->
+
+<button
+  [type]="type"
+  [disabled]="isDisabled"
+  [ngClass]="['btn', color, customClass]"
+>
+  {{ text }}
+</button>

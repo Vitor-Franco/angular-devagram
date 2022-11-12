@@ -1,0 +1,37 @@
+@mixin primaryButton {
+  background-color: var(--primaryColor);
+  color: var(--white);
+}
+
+@mixin outlineButton {
+  background-color: var(--white);
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &.primary {
+    @include primaryButton;
+
+    &:hover {
+      @include outlineButton;
+    }
+  }
+
+  &.outline {
+    @include outlineButton;
+
+    &:hover {
+      @include primaryButton;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
