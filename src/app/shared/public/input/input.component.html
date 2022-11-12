@@ -1,0 +1,22 @@
+<div class="containerPublicInput">
+  <div class="publicInput">
+    <img
+      [src]="image"
+      alt="Imagem do input"
+      class="inputIcon"
+      width="20"
+      height="20"
+    />
+
+    <input
+      [type]="type"
+      [placeholder]="placeholder"
+      (ngModelChange)="onChangeField($event)"
+      [ngModel]="refForm?.value"
+    />
+  </div>
+
+  <p *ngIf="refForm?.invalid && refForm?.dirty" class="erroMessage">
+    {{ getErrorMessage() }}
+  </p>
+</div>
