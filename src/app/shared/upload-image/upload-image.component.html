@@ -1,0 +1,20 @@
+<div
+  [ngClass]="['containerUploadImage', customClassContainer]"
+  (click)="inputFile.click()"
+>
+  <div class="containerPreview" *ngIf="previewImage">
+    <img
+      [src]="previewImage"
+      alt="Imagem de pré visualização"
+      [class]="previewImageCustomClass"
+    />
+  </div>
+
+  <input
+    #inputFile
+    type="file"
+    class="hidden"
+    accept="image/*"
+    (change)="onUploadImage($event)"
+  />
+</div>
