@@ -6,18 +6,19 @@
   --fontBold: "Biennale Bold", sans-serif;
   --fontLight: "Biennale Light", sans-serif;
 
-  --primaryColor: #5E49FF;
-  --primaryColor1: #3BD42D;
-  --primaryColor2: #25CBD3;
-  --primaryColor3: #F0F5FF;
+  --primaryColor: #5e49ff;
+  --primaryColor1: #3bd42d;
+  --primaryColor2: #25cbd3;
+  --primaryColor3: #f0f5ff;
 
-  --gray: #F4F4F4;
-  --gray1: #DADADA;
-  --gray2: #7C7786;
-  --gray3: #4D4D4D;
+  --gray: #f4f4f4;
+  --gray1: #dadada;
+  --gray2: #7c7786;
+  --gray3: #4d4d4d;
   --gray4: #333333;
 
-  --white: #FFF;
+  --white: #fff;
+  --red: #ff0000;
 }
 
 * {
@@ -28,10 +29,25 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 .hidden {
-  display: none!important;
+  display: none !important;
+}
+
+input {
+  &::placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    color: var(--gray2);
+  }
+}
+
+.errorMessage {
+  color: var(--red);
+  margin: 5px 0 0;
+  font-size: 90%;
 }
