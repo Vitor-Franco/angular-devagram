@@ -1,0 +1,16 @@
+@import "../../assets/styles/variables.scss";
+
+app-page {
+  app-input {
+    display: block;
+    margin-bottom: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:first-of-type {
+      margin-top: 40px;
+    }
+  }
+}

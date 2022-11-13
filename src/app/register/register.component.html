@@ -1,0 +1,53 @@
+<app-page
+  customContainerClass="registerPage"
+  customLogoClass="desktop"
+  textButtonSubmit="Cadastrar"
+  (submitForm)="onSubmit()"
+>
+  <app-upload-image
+    formContent
+    [refFormControl]="getFormReference('file')"
+    previewImage="assets/images/avatar.svg"
+    previewImageCustomClass="avatarPreview"
+    customClassContainer="registerPageUpload"
+  ></app-upload-image>
+
+  <app-input
+    formContent
+    image="assets/images/activeUser.svg"
+    placeholder="Nome completo"
+    type="text"
+    [refForm]="getFormReference('name')"
+  ></app-input>
+
+  <app-input
+    formContent
+    image="assets/images/mail.svg"
+    placeholder="E-mail"
+    type="email"
+    [refForm]="getFormReference('email')"
+  ></app-input>
+
+  <app-input
+    formContent
+    image="assets/images/key.svg"
+    placeholder="Senha"
+    type="password"
+    [refForm]="getFormReference('password')"
+  ></app-input>
+
+  <app-input
+    formContent
+    image="assets/images/key.svg"
+    placeholder="Confirmação de senha"
+    type="password"
+    [refForm]="getFormReference('confirmPassword')"
+  ></app-input>
+
+  <app-footer
+    question="Já possui uma conta?"
+    textAction="Faça seu login agora!"
+    routePath="/login"
+    footer
+  ></app-footer>
+</app-page>
