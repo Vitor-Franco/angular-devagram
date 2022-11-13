@@ -1,0 +1,24 @@
+<app-page textButtonSubmit="Login">
+  <app-input
+    formContent
+    image="assets/images/mail.svg"
+    placeholder="E-mail"
+    type="email"
+    [refForm]="getFormReference('email')"
+  ></app-input>
+
+  <app-input
+    formContent
+    image="assets/images/key.svg"
+    placeholder="Senha"
+    type="password"
+    [refForm]="getFormReference('password')"
+  ></app-input>
+
+  <app-footer
+    question="Não possui uma conta?"
+    textAction="Faça seu cadastro agora!"
+    routePath="/cadastro"
+    footer
+  ></app-footer>
+</app-page>
