@@ -17,7 +17,6 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {}
 
   onChangeField(event: any): void {
-    console.log('change');
     this.refForm?.setValue(event);
     this.refForm?.markAsDirty();
   }
@@ -29,6 +28,18 @@ export class InputComponent implements OnInit {
 
     if (this.refForm?.errors['required']) {
       return 'Campo obrigatório';
+    }
+
+    if (this.refForm?.errors['email']) {
+      return 'E-mail inválido';
+    }
+
+    if (this.refForm?.errors['minlength']) {
+      return `Deve ter no mínimo ${this.refForm?.errors['minlength'].requiredLength} caracteres`;
+    }
+
+    if (this.refForm?.errors['confirmPassword']) {
+      return 'As senhas não conferem';
     }
 
     return 'Problemas no preenchimento!';
